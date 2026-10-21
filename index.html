@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="spy-style.css">
+
+</head>
+<body>
+
+<svg class="grain" width="100%" height="100%">
+  <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect width="100%" height="100%" filter="url(#n)"/>
+</svg>
+<div class="atmosphere"></div>
+
+
+<nav class="top-nav" id="topNav">
+  <a href="#" class="nav-brand">SCARY TOWN<span>System</span></a>
+  <ul class="nav-links">
+    <li><a href="#staff">الهيكل الإداري</a></li>
+    <li><a href="#Respons">المسؤوليات</a></li>
+    <li><a href="#rules">القوانين</a></li>
+    <li class="dd"><a href="#channels">الأنظمة <b>▼</b></a><ul class="dd-menu"><li><a href="#channels">الرومات</a></li><li><a href="#faq">الأرشيف</a></li></ul></li>
+  </ul>
+  <div class="lb-wrap" id="lbWrap">
+    <button class="lb-btn" id="lbBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lbPanel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+      <span>المتصدرون</span><i class="lb-caret"></i>
+    </button>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span class="toggle-bar"></span><span class="toggle-bar"></span>
+  </button>
+</nav>
+
+<div class="lb-panel" id="lbPanel" role="dialog" aria-label="قائمة المتصدرين">
+      <div class="lb-h">
+        <span class="lb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span>
+        <span class="lb-t"><b>قائمة المتصدرين</b><small>أفضل 10 إداريين متفاعلين</small></span>
+        <em class="lb-top">TOP 10</em>
+      </div>
+      <ol class="lb-list" id="lbList"></ol>
+      <div class="lb-f"><span>تتحدث تلقائياً من نظام الجرد</span></div>
+    </div>
+
+
+<div class="mobile-menu" id="mobileMenu">
+  
+  <div class="mobile-menu-inner">
+
+    <div class="mobile-menu-links">
+      <a href="#" class="mobile-menu-link" data-index="01">الرئيسية</a>
+      <a href="#channels" class="mobile-menu-link" data-index="02">الرومات</a>
+      <a href="#staff" class="mobile-menu-link" data-index="03">الهيكل الإداري</a>
+      <a href="#Respons" class="mobile-menu-link" data-index="04">المسؤوليات</a>
+      <a href="#rules" class="mobile-menu-link" data-index="05">القوانين</a>
+      </div>
+
+    <div class="mobile-menu-footer">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="side-panel left" aria-label="Scroll indicators">
+  <span class="side-label">Scroll</span>
+  <div class="side-track"><div class="side-track-fill" id="leftTrack"></div></div>
+  <div class="side-dot active"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-readout" id="scrollPct">00</div>
+</nav>
+
+<nav class="side-panel right" aria-label="Status indicators">
+  <span class="side-label">Status</span>
+  <div class="side-track"><div class="side-track-fill" id="rightTrack"></div></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot active"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-dot"></div>
+  <div class="side-readout">LMN</div>
+</nav>
+
+<main class="main">
+
+<!--  قسم Hero -->
+<section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>نظام الإدارة العام </span>
+    </div>
+    <h1> <em>Scary Town</em><br></h1>
+    <p class="hero-sub"><strong><b>
+نظام الإدارة المركزي لسيرفر Scary Town، يوفّر للإداريين منصة موحدة للوصول إلى جدول الباندات، العقوبات، المخالفات، والإجراءات التنظيمية، بهدف تعزيز الكفاءة والالتزام داخل المسؤولية بشكل افضل .
+    </strong></b></p>
+  
+
+
+    <div class="hero-ctas">
+      <a href="#staff" class="btn-primary">جدول الإدارة</a>
+      <a href="staff.html" class="btn-secondary">نظام الإدارة الخاص</a>
+      
+    </div>
+      <!-- Metrics -->
+
+    <div class="hero-metrics">
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="98" data-decimals="0">0</span><span>%</span></div>
+        <div class="metric-label">نسبة حل مشكلتك !</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="counter" data-target="20" data-decimals="0">0</span><span>+</span></div>
+        <div class="metric-label">  مسؤوليات ادارية  </div>
+      </div>
+    </div>
+</section>
+
+  
+  <div class="logo-ticker">
+    <div class="logo-ticker-label">Scary Town</div>
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item"> اداره متفاعله </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> مسؤوليات ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> قوانين ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تحكم كامل </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تركيز عالي </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تنظيم اداري </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> انظمة ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> سستم متكامل </span><span class="ticker-dot"></span>
+      
+      <span class="ticker-item"> اداره متفاعله </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> مسؤوليات ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> قوانين ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تحكم كامل </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تركيز عالي </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> تنظيم اداري </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> انظمة ادارية </span><span class="ticker-dot"></span>
+      <span class="ticker-item"> سستم متكامل </span><span class="ticker-dot"></span>
+    
+  </div>
+</div>
+  
+ <section class="section section-center" id="channels">
+    <p class="section-tag reveal">Admin Rooms</p>
+    <h2 class="section-title reveal reveal-d1"> الرومات <strong>الإدارية</strong></h2>
+    <div class="chan-list stg reveal reveal-d2">
+      <button class="chan" data-go="rules:t-rules"><span class="ic">📋</span><span><h4><i></i>قوانين-المسؤولين</h4><p>التسلسل الإداري والانضباط والمحاسبة</p></span><span class="go">‹</span></button>
+      <button class="chan" data-go="rules:t-req"><span class="ic">📌</span><span><h4><i></i>متطلبات-المسؤولين</h4><p>المهام الأساسية والجرد والمطلوب حالياً</p></span><span class="go">‹</span></button>
+      <button class="chan"><span class="ic">⚙️</span><span><h4><i></i>نظام-الجرد</h4><p>جرد الباند والسبكتيت وباقي المسؤوليات</p></span></button>
+    </div>
+</section>
+<section class="section section-center" id="staff">
+
+    <p class="section-tag reveal">Server Management</p>
+    <h2 class="section-title reveal">
+        الهيكل <strong> الإداري للسيرفر و مهامه</strong>
+    </h2>
+    <div class="tabs reveal"><button class="tab active" data-t="t-week">المهام والمتطلبات</button><button class="tab" data-t="t-all">جدول الإداريين</button></div>
+    <div class="tpanel active" id="t-week"><div class="rank-section reveal">
+
+        <h3 class="rank-title">الإدارة الصغرى</h3>
+
+        <table class="rank-table">
+
+            <thead>
+                <tr>
+                    <th width="80">الترتيب</th>
+                    <th width="260">الرتبة</th>
+                    <th>المهام المطلوبة</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+               <tr><td>01</td><td>Support</td><td>
+<p> ⏱️ 14 ساعة </p>
+<p> ✉️  20 تكت </p>
+<p> عدد السحب  بالاسست (Move) : 120</p>
+<p>ساعتين رقابيه</p>
+                </td></tr>
+                <tr><td>02</td><td>Trial Mod</td><td>
+<p>⏱️  16 ساعة </p>
+<p>✉️  100 تكت </p>
+<p>عدد السحب  بالاسست (Move) : 130</p>
+<p>ساعتين رقابيه</p>
+
+                </td></tr>
+                <tr><td>03</td><td>Mod</td><td> 
+<p>⏱️ 18 ساعه </p>
+<p>✉️  100 تكت </p>
+<p>  عدد السحب  بالاسست (Move) : 140</p>
+<p>3ساعات رقابيه</p>
+
+                </td></tr>
+                <tr><td>04</td><td>Senior Mod</td><td>
+                  
+<p>⏱️ 20 ساعه</p>
+<p>✉️  110 تكت</p>
+<p>عدد السحب  بالاسست (Move) : 170</p>
+<p>3ساعات رقابيه</p>
+
+
+                </td></tr>
+                <tr><td>05</td><td>Trail</td><td>
+<p>⏱️ 20 ساعة </p>
+<p>✉️  115 تكت </p>
+<p>عدد السحب  بالاسست (Move) : 180</p>
+<p>4ساعات رقابيه</p>
+
+                </td></tr>
+                <tr><td>06</td><td>Trusted</td><td>
+<p>⏱️ 22 ساعة </p>
+<p>✉️  115 تكت </p>
+<p>عدد السحب  بالاسست (Move) : 200</p>
+<p>4ساعات رقابيه</p>
+
+                </td></tr>
+                <tr><td>07</td><td>Skilled</td><td>
+<p>⏱️ 24 ساعة  </p>
+<p>✉️  125 تكت </p>
+<p>عدد السحب  بالاسست (Move) : 230</p>
+<p>6ساعات رقابيه</p>
+
+                </td></tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="rank-section reveal">
+
+        <h3 class="rank-title">الإدارة الوسطى</h3>
+
+        <table class="rank-table">
+
+            <tbody>
+
+                <tr><td width="80">08</td><td width="260">Supervisor</td><td>
+<p>⏱️ 26 ساعة </p>
+<p>✉️ 130 تكت </p>
+<p>عدد السحب  بالاسست (Move) : 270</p>
+<p>6ساعات رقابيه</p>
+
+                </td></tr>
+                <tr><td>09</td><td>Expert</td><td> 
+<p>⏱️ 32 ساعة </p>
+<p>✉️  135  تكت </p>
+<p> عدد السحب  بالاسست (Move) : 340</p>
+<p>8ساعات رقابيه</p>
+
+                </td></tr>
+
+
+                <tr><td>10</td><td>Staff</td><td> 
+<p>⏱️ 36 ساعة</p>
+<p>✉️  160  تكت </p>
+<p> عدد السحب  بالاسست (Move) : 360</p>
+<p>8ساعات رقابيه</p>
+
+                </td></tr>
+
+                <tr><td>11</td><td>Operator</td><td>
+<p>⏱️ 44 ساعة </p>
+<p>✉️  165  تكت </p>
+<p>عدد السحب  بالاسست (Move) : 380</p>
+<p>12ساعات رقابيه</p>
+
+                </td></tr>
+
+                <tr><td>12</td><td>Admin</td><td>
+<p>تقديم 6 اقتراحات لتطوير الإدارة والسيرفر</p>
+<p>حصر أبرز المشاكل الحالية وذكر الحلول المناسبة لها.</p>
+<p>استلام مسؤولية واحده على الأقل و التفاعل بها بالشكل المطلوب { Dep - Svr - Manag } .</p>  
+<p>التواجد في المراقبه لمدة لا تقل عن 7 ساعات خلال الفتره المحدده.</p>
+<p>ان لا يقل السحب عن 120 سحب في الدعم خلال الفتره المحدده.</p>
+<p>المشاركه في الاستدعائات الدوريه مع اثبات ذلك بالإلتزام بإستبيان المراقبه و ان لا تقل عن 10 استدعائات.</p>
+<p>رصد و مخالفة في قسم الباند لا تقل عن 10 محاسبه.</p>
+                </td></tr>
+                
+                <tr><td>13</td><td>Super Admin</td><td>
+<p>  اثبات جدارة:</p>
+               </td></tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</div>
+    <div class="tpanel" id="t-all">
+      <div class="rank-section"><h3 class="rank-title">جدول الإداريين (<span id="rkTotal">0</span> رتبة · <span id="memTotal">0</span> إداري)</h3>
+      <div class="tools rt-tools"><input class="ad-input" id="rtQ" type="search" placeholder="ابحث باسم الإداري أو الرتبة" autocomplete="off"><label class="rt-chk"><input type="checkbox" id="rtEmpty"><span>إخفاء الرتب الفارغة</span></label></div>
+      <div id="allRanks"></div></div>
+    </div>
+</section>
+<section class="section section-center" id="Respons">
+    <p class="section-tag reveal"><b> Responsibilities </b></p>
+    <h2 class="section-title reveal reveal-d1">المسؤوليات <strong>و مسؤولينها</strong></h2>
+    <p class="section-body reveal reveal-d2" style="margin:18px auto 0">المانجر والديبوتي فقط لكل قسم (<span id="deptCount">0</span> قسم). اكتب الاسم وسيُحفظ تلقائياً.</p>
+    <div class="dept-grid stg" id="deptGrid"></div>
+</section>
+<section class="section section-center" id="rules">
+    <p class="section-tag reveal"><b> Rules </b></p>
+    <h2 class="section-title reveal reveal-d1">دليل <strong>الإدارة الرسمي</strong></h2>
+    <div class="tabs reveal"><button class="tab active" data-t="t-rules">قوانين المسؤولين</button><button class="tab" data-t="t-req">متطلبات المسؤولين</button><button class="tab" data-t="t-gen">القوانين العامة</button></div>
+    <div class="tpanel active" id="t-rules"><div class="rank-section"><h3 class="rank-title">قوانين المسؤولين</h3><div class="tools"><button class="ad-btn" data-all="rulesList" data-s="0">فتح الكل</button></div><div id="rulesList"></div></div></div>
+    <div class="tpanel" id="t-req"><div class="rank-section"><h3 class="rank-title">متطلبات المسؤولين</h3>
+      <div style="padding:22px 30px 0"><div class="callout">إلى جميع مسؤولي المسؤوليات، يُرجى الالتزام الكامل بالمهام والمتطلبات التالية. استلام المسؤولية تكليف إداري يتطلب المتابعة المستمرة وتحمل النتائج، وأي إهمال أو تقصير سيعرّض صاحبه للمحاسبة، وقد يصل إلى سحب المسؤولية منه.</div></div>
+      <div class="tools"><button class="ad-btn" data-all="reqList" data-s="0">فتح الكل</button></div><div id="reqList"></div>
+      <div style="padding:6px 30px 26px"><div class="callout warn">كما اوضح لكم الجديه في العمل دون اي تبرير في التقصير او اهمال المسؤولية، كما سيتم اضافة نظام جديد للجرد وعليه يتم جردك مع المسؤولية وتقييمك تقييم اسبوعي.</div><div class="callout">يفيدك التقييم في ازالة السترايك او تجنبك للمحاسبه، كما يفيدك ايضاً في تمييزك في المسؤولية وتقييمك في الإداره.</div><div class="callout warn">وللتنويه بأن جميع القرارات يتم اتخاذها بحذر، وعليه في اي مخالفه تراها من اي مسؤول يرجى منك التواصل معي عبر الخاص.</div></div>
+    </div></div>
+    <div class="tpanel" id="t-gen"><div class="rank-section"><h3 class="rank-title">القوانين العامة</h3><div class="tools"><button class="ad-btn" data-all="genList" data-s="0">فتح الكل</button></div><div id="genList"></div></div></div>
+</section>
+
+<datalist id="names"></datalist>
+<section class="section section-center" id="testimonials">
+    <p class="section-tag reveal">  مسؤولين الإداره  </p>
+    <h2 class="section-title reveal reveal-d1">Built by a team<strong> you can trust</strong></h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal reveal-d1">
+        <p class="testimonial-quote">"   Staff Director   "</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+         <div class="testimonial-name">M J E D</div>
+
+<div class="testimonial-role">
+    <a href="https://discord.gg/uj"
+       class="profile-link"
+       target="_blank">
+        🔗 Discord Server
+    </a>
+</div>
+          </div>
+        </div>
+      </div>
+
+     <div class="testimonial-card reveal reveal-d2">
+    <p class="testimonial-quote">"  Staff Director "</p>
+
+    <div class="testimonial-author">
+        <div class="testimonial-avatar">R</div>
+
+        <div>
+            <div class="testimonial-name">Refi</div>
+
+            <div class="testimonial-role">
+                <a href="https://discord.gg/uj"
+                   class="profile-link"
+                   target="_blank">
+                    🔗 Discord Server
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <div class="testimonial-card reveal reveal-d3">
+    <p class="testimonial-quote">" Supervisor of Responsibilities  "</p>
+
+    <div class="testimonial-author">
+        <div class="testimonial-avatar">A</div>
+
+        <div>
+            <div class="testimonial-name">Al-Shiekh</div>
+
+            <div class="testimonial-role">
+                <a href="https://discord.gg/uj"
+                   class="profile-link"
+                   target="_blank">
+                    🔗 Discord Server
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</div>
+
+
+  </section>
+
+  <div class="silk-divider reveal"></div>
+
+ 
+  
+  <section class="section section-center" id="faq">
+    <p class="section-tag reveal"> Archive </p>
+    <h2 class="section-title reveal reveal-d1">Questions we hear <strong>most often</strong></h2>
+
+    <div class="faq-list reveal reveal-d2">
+      <div class="faq-controls">
+        <button class="faq-toggle-all" id="faqToggleAll">Expand All</button>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">طريقة ازالة السترايك؟<span class="faq-icon"></span></button>
+        <div  class="faq-answer"><div class="faq-answer-inner"> 
+          <p>يجب عليك طلب إزالة السترايك من المشرف في حال اثبتت نفسك او انتهت فترة السترايك</p>
+          <a  href="https://discord.gg/uj">Scary Town</a> </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">هل مسموح ازالة السترايك من نفسي؟<span class="faq-icon"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">لا، لا يسمح بإزالة السترايك من نفسك. يجب طلب الإزالة من المشرف.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">  هل مسموح التدخل في مسؤوليات الأخرين؟  <span class="faq-icon"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">لا، لا يسمح بالتدخل في مسؤوليات الأخرين دون إذن منهم. وذلك يعرضك للمحاسبه بشكل فوري</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question"> هل مسموح التدخل في شؤون مسؤولين الإدارة؟ <span class="faq-icon"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">يمنع منعاً باتاً التدخل في شؤون مسؤولين الإدارة نهائياً</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">من هو الشخص او المشرف الأول لإستلام شكوتي كمسؤول؟ <span class="faq-icon"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"> Al-Shiekh و يمنع تخطيه او الذهاب الى المسؤولين بشكل مباشر </div></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="footer-cta" id="cta">
+    <p class="section-tag reveal">INFO</p>
+    <h2 class="section-title reveal reveal-d1">Bulid Your Website<br><strong>starts here</strong></h2>
+    <div class="footer-ctas reveal reveal-d3">
+      <a href="https://discord.gg/1-O" class="btn-primary">1O1 Store</a>
+      <a href="https://discord.gg/uj" class="btn-secondary">Contact</a>
+    </div>
+
+    <div class="footer-bar reveal reveal-d4" style="margin-top: 80px;">
+      <div class="footer-brand">Scary Town | By Al-Shiekh</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Status</a>
+        <span class="footer-credit">Instagram: <a href="https://www.instagram.com/zkxb5?igsh=bDY1MmFnOHJnMG96" target="_blank" rel="nofollow">Zkxb5</a></span>
+        <span class="footer-credit">Discord: <a href="https://discord.gg/1-O" target="_blank" rel="nofollow">Zkxb5</a></span>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  
+</main>
+
+
+
+
+<script src="roster.js"></script>
+<script src="spy-script.js"></script>
+<script src="admin-system.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

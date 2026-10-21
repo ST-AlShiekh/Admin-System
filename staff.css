@@ -1,0 +1,27 @@
+/* صفحة الجرد والسترايكات — إضافات خاصة بهذه الصفحة فقط (الستايل الأساسي من spy-style.css) */
+body.locked .inv-nav,body.locked .inv-main,body.locked #fxEmbers,body.locked #scrollBar{display:none}
+body.unlocked .gate{display:none}
+.inv-main{padding-top:110px}
+.inv-nav .nav-links{display:flex!important}
+.inv-actions{display:flex;gap:10px;align-items:center}
+.inv-actions .lb-btn{height:40px;padding:0 18px;text-decoration:none;cursor:pointer}
+@media (max-width:768px){.inv-nav{gap:10px}.inv-nav .nav-links{gap:14px}.inv-nav .nav-links a{font-size:12px}.inv-actions .lb-btn{padding:0 12px;height:36px;font-size:12px}.inv-nav .nav-brand{display:none}.inv-main{padding-top:90px}}
+
+/* بوابة كلمة المرور */
+.gate{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:20px}
+.gate[hidden]{display:none}
+.gate-card{position:relative;z-index:5;width:min(420px,100%);display:flex;flex-direction:column;align-items:stretch;gap:14px;text-align:center;padding:38px 32px 28px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--bd,rgba(255,255,255,.09));backdrop-filter:blur(22px);box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,127,127,.05);animation:fadeUp .7s both}
+.gate-card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;border-radius:24px 24px 0 0;background:linear-gradient(90deg,transparent,#ff7f7f,transparent)}
+.gate-ic{width:62px;height:62px;margin:0 auto 4px;display:grid;place-items:center;border-radius:20px;color:#ffb3b3;background:rgba(255,127,127,.1);border:1px solid rgba(255,127,127,.28);box-shadow:0 0 30px rgba(255,80,80,.22)}
+.gate-ic svg{width:28px;height:28px}
+.gate-card .section-tag{margin:0}
+.gate-title{margin:0;font-size:30px;font-weight:300;color:#fff}
+.gate-title strong{background:linear-gradient(110deg,#ff7f7f 20%,#fff 45%,#ff7f7f 70%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sweep 5s linear infinite}
+.gate-sub{margin:0 0 6px;font-size:14px;color:#9aa3bd;line-height:1.7}
+.gate-input{text-align:center;letter-spacing:.12em;padding:13px 14px;font-size:16px}
+.gate-btn{width:100%;padding:13px;font-size:15px}
+.gate-err{min-height:20px;font-size:13px;color:#ff8d8d}
+.gate-back{font-size:13px;color:#8f98b3;text-decoration:none;transition:.25s}
+.gate-back:hover{color:#fff}
+.gate-card.shake{animation:gShake .45s}
+@keyframes gShake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
